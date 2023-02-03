@@ -1,0 +1,49 @@
+{
+  "name": "react-admin-menu-extended",
+  "version": "1.0.0",
+  "description": "Free, Open-Source alternative to react-admin enterprise edition MultiLevelMenu",
+  "scripts": {
+    "rollup": "rm -rf dist && rollup -c",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "engines": {
+    "node": "^17.0.0"
+  },
+  "author": "Krzysztof Krzeszewski",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/react": "^18.0.27",
+    "babel-loader": "^8.3.0",
+    "jest-environment-jsdom": "^29.4.1",
+    "react": "^18.2.0",
+    "rollup": "^3.12.1",
+    "rollup-plugin-dts": "^5.1.1",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "react-dom": "^18.2.0"
+  }
+}
