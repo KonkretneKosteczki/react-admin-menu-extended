@@ -3,14 +3,17 @@ import {
     Menu as RaMenu,
     MenuItemLink,
     useSidebarState,
-    useTranslate,
     useResourceDefinitions
 } from "react-admin";
 import ViewListIcon from "@mui/icons-material/ViewList";
 import Collapse from "@mui/material/Collapse";
-import Tooltip from "@mui/material/Tooltip";
 import List from "@mui/material/List";
 import {To} from "@remix-run/router/history";
+
+// TODO: config option for at most one menu item opened
+// TODO: button element
+// TODO: allow custom elements not menu item as children
+// TODO: for resource submenu hide submenu items if resource list view is not defined
 
 export interface MenuItemProps {
     to?: To;
