@@ -1,11 +1,15 @@
 {
-  "name": "react-admin-menu-extended",
-  "version": "1.0.0",
+  "name": "@konkretnekosteczki/react-admin-menu-extended",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@konkretnekosteczki"
+  },
+  "version": "1.0.1",
   "description": "Free, Open-Source alternative to react-admin enterprise edition MultiLevelMenu",
   "scripts": {
     "rollup": "rm -rf dist && rollup -c",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepublishOnly": "npm run rollup"
   },
   "engines": {
     "node": "^17.0.0"
