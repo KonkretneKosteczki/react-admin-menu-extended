@@ -3,6 +3,10 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@konkretnekosteczki"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KonkretneKosteczki/react-admin-menu-extended.git"
+  },
   "version": "1.0.1",
   "description": "Free, Open-Source alternative to react-admin enterprise edition MultiLevelMenu",
   "scripts": {
