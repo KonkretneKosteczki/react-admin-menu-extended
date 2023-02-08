@@ -1,8 +1,5 @@
 {
   "name": "@konkretnekosteczki/react-admin-menu-extended",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@konkretnekosteczki"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/KonkretneKosteczki/react-admin-menu-extended.git"
@@ -50,7 +47,8 @@
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "types": "dist/index.d.ts",
   "dependencies": {
