@@ -8,10 +8,13 @@ import {
 import ViewListIcon from "@mui/icons-material/ViewList";
 import Collapse from "@mui/material/Collapse";
 import List from "@mui/material/List";
+import MaterialMenuItem from "@mui/material/MenuItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import Typography from "@mui/material/Typography";
 import {To} from "@remix-run/router/history";
 
 // TODO: config option for at most one menu item opened
-// TODO: button element
+// TODO: arrows for closing rather than automatically close when trying to view list
 // TODO: allow custom elements not menu item as children
 // TODO: for resource submenu hide submenu items if resource list view is not defined
 
@@ -23,6 +26,7 @@ export interface MenuItemProps {
     leftIcon?: React.ReactElement;
     openedIcon?: React.ReactElement;
     closedIcon?: React.ReactElement;
+    onClick?: () => void;
 }
 
 export const MenuItem: React.FC<MenuItemProps> = (props) => {
@@ -42,8 +46,17 @@ export const MenuItem: React.FC<MenuItemProps> = (props) => {
     // menu resource
     if (props.name) return <RaMenu.ResourceItem name={props.name}/>;
 
-    // custom button
-    return <div>TEXT</div>
+    // menu button & menu folder
+    return (
+        <MaterialMenuItem onClick={props.onClick}>
+            <ListItemIcon style={{minWidth: "40px"}}>
+                {props.leftIcon ?? <ViewListIcon />}
+            </ListItemIcon>
+            <Typography variant="inherit" color="textSecondary">
+                {props.primaryText}
+            </Typography>
+        </MaterialMenuItem>
+    )
 }
 
 const SubMenu: React.FC<MenuItemProps & {children: NonNullable<MenuItemProps["children"]>}> = (
@@ -57,7 +70,8 @@ const SubMenu: React.FC<MenuItemProps & {children: NonNullable<MenuItemProps["ch
     const [sidebarIsOpen] = useSidebarState();
     const [isOpen, setOpen] = useState(false);
 
-    const resourceIcon = props.name ? resources[props.name]?.icon ?? <ViewListIcon /> : <ViewListIcon />;
+    const leftIcon = props.leftIcon ?? <ViewListIcon />;
+    const resourceIcon = props.name ? resources[props.name]?.icon ?? leftIcon : leftIcon;
     const arrayChildren = Array.isArray(children) ? children : [children];
     return (
         <div>

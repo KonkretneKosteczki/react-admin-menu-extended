@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/KonkretneKosteczki/react-admin-menu-extended.git"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Free, Open-Source alternative to react-admin enterprise edition MultiLevelMenu",
   "scripts": {
     "rollup": "rm -rf dist && rollup -c",

@@ -26,6 +26,9 @@ At the core of the library lies a single component that takes care of all your m
 
             {/*base level menu item created via passing of the link parameters*/}
             <MenuItem to="/users" primaryText="Events">
+            
+            {/*base level menu item created via passing of onClick handler*/}
+            <MenuItem onClick={() => alert("Pressed Button")} primaryText="Alert">
 
             {/*multi level menu item created via passing of the resource name*/}
             <MenuItem name="events">
@@ -35,6 +38,12 @@ At the core of the library lies a single component that takes care of all your m
 
             {/*multi level menu item created via passing of the link parameters*/}
             <MenuItem to="/events" primaryText="Events Link">
+                <MenuItem to="/events/1/show" primaryText="Event #1" />
+                <MenuItem to="/events/2/show" primaryText="Event #2" />
+            </MenuItem>
+            
+            {/*multi level menu item with no extra action, just serving the purpose of a folder*/}
+            <MenuItem primaryText="Folder #1">
                 <MenuItem to="/events/1/show" primaryText="Event #1" />
                 <MenuItem to="/events/2/show" primaryText="Event #2" />
             </MenuItem>
@@ -76,5 +85,27 @@ import EventBusyIcon from '@mui/icons-material/EventBusy';
         <MenuItem to="/events/1/show" primaryText="Event #1" leftIcon={<EventIcon />} />
         <MenuItem to="/events/2/show" primaryText="Event #2" leftIcon={<EventBusyIcon />} />
     </MenuItem>
+</Menu>
+```
+
+## Extra divider component
+
+Application also exports a custom menu divider component that can help in sorting the menu items. Component accepts a label prop for customization purposes.
+
+```html
+<Menu>
+    <MenuDivider label="Users Section" />
+
+    <MenuItem name="users" />
+    <MenuItem to="/users/1/show" primaryText="User #1" />
+    <MenuItem to="/users/2/show" primaryText="User #2" />
+
+    <MenuDivider label="Events Section" />
+
+    <MenuItem name="events" />
+    <MenuItem to="/events/1/show" primaryText="Event #1" />
+    <MenuItem to="/events/2/show" primaryText="Event #2" />
+
+    <MenuDivider />
 </Menu>
 ```

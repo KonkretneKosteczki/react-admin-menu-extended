@@ -132,6 +132,11 @@ export const SubMenu: React.FC = () => (
                     <MenuItem to="/events/1/show" primaryText="Event #1" />
                     <MenuItem to="/events/2/show" primaryText="Event #2" />
                 </MenuItem>
+                <MenuItem primaryText="Folder with no action">
+                    <MenuItem to="/events/1/show" primaryText="Event #1" />
+                    <MenuItem to="/events/2/show" primaryText="Event #2" />
+                </MenuItem>
+                <MenuItem primaryText="Button with onClick" onClick={() => alert("Pressed Button")} />
             </Menu>
         )}
     >
