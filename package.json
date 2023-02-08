@@ -16,7 +16,7 @@
     "node": "^17.0.0"
   },
   "author": "Krzysztof Krzeszewski",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@rollup/plugin-commonjs": "^24.0.1",
