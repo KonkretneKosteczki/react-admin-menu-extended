@@ -50,6 +50,16 @@
     "dist",
     "README.md"
   ],
+  "keywords": [
+    "react",
+    "react-js",
+    "react-admin",
+    "admin",
+    "menu",
+    "menu-extended",
+    "components",
+    "dashboard"
+  ],
   "types": "dist/index.d.ts",
   "dependencies": {
     "react-dom": "^18.2.0"

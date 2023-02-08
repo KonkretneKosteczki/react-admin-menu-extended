@@ -54,9 +54,6 @@ At the core of the library lies a single component that takes care of all your m
                     <MenuItem to="/events/1/edit" primaryText="Event #1 (Edit)" />
                 </MenuItem>
             </MenuItem>
-
-            {/*soon to be added: menu item button support*/}
-            <MenuItem onClick={handleClick} primaryText="Menu Button">
         </Menu>
     )}
 >
